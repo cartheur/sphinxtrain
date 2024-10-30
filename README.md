@@ -1,6 +1,10 @@
 ## sphinxtrain
 
-The last (good) version written in C.
+The last (good) version written in C. Install [sphinxbase](https://github.com/cartheur/sphinxbase) first.
+
+Get the 4.0.0 code [here](https://sourceforge.net/projects/cmusphinx/files/).
+
+Read about training with `libirispeech` [here](https://cmusphinx.github.io/2022/08/sphinxtrain-librispeech/), where the website is [here](https://www.openslr.org/12/).
 
 ### What is sphinxtrain?
 

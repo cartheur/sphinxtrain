@@ -104,3 +104,29 @@ Long Qin (lqin@cs.cmu.edu)
 Rita Singh (rsingh+@cs.cmu.edu)
 Eric Thayer
 
+### Code checking
+
+```
+def updateMouth():
+    lastMouthEvent = 0
+    lastMouthEventTime = 0
+
+    while( audio == None ):
+        time.sleep( 0.1 )
+
+    while isRunning:
+        if( audio.mouthValue != lastMouthEvent ):
+            lastMouthEvent = audio.mouthValue
+            lastMouthEventTime = time.time()
+
+            if( audio.mouthValue == 1 ):
+                io.set( MOUTH_OPEN, 1 )
+                io.set( MOUTH_CLOSE, 0 )
+            else:
+                io.set( MOUTH_OPEN, 0 )
+                io.set( MOUTH_CLOSE, 1 )
+        else:
+            if( time.time() - lastMouthEventTime > 0.5 ):
+                io.set( MOUTH_OPEN, 0 )
+                io.set( MOUTH_CLOSE, 0 )
+```

@@ -130,3 +130,8 @@ def updateMouth():
                 io.set( MOUTH_OPEN, 0 )
                 io.set( MOUTH_CLOSE, 0 )
 ```
+
+```
+mouthThread = Thread(target=updateMouth)
+mouthThread.start()
+```
